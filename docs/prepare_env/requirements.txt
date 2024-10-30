@@ -67,7 +67,7 @@ ipykernel
 
 # lama
 hydra-core
-pytorch_lightning
+# pytorch_lightning
 setproctitle
 
 # Gradio GUI
