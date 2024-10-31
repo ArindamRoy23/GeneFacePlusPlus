@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+
+# Save this as setup_genefaceplusplus.sh.
+# Make the script executable: chmod +x setup_genefaceplusplus.sh.
+# Run with sudo if needed: sudo ./setup_genefaceplusplus.sh.
 # Navigate to the GeneFacePlusPlus directory
 cd /home/roy/GeneFacePlusPlus
 
@@ -15,7 +20,7 @@ conda install -c conda-forge ffmpeg -y
 
 # Install PyTorch, TorchVision, Torchaudio, PyTorch3D, and other required packages
 conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.8 pytorch3d -c pytorch -c nvidia -c pytorch3d -y
-conda install mkl==2024.0
+conda install mkl==2024.0 -y
 
 # Install Lightning from conda-forge
 conda install -c conda-forge lightning -y
@@ -33,3 +38,9 @@ pip install -r docs/prepare_env/requirements.txt -v
 
 # Build torch-ngp
 bash docs/prepare_env/install_ext.sh
+
+
+# conda deactivate
+# sudo chmod -R a+w /opt/conda/envs
+# conda remove -n geneface --all
+# conda clean --all
